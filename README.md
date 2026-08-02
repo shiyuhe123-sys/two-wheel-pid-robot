@@ -2,9 +2,19 @@
 
 An independent 2022/23 learning prototype that closed the loop between an MPU9250 attitude estimate, a PID controller and two geared DC motors on an Arduino Uno.
 
+## Provenance
+
+- **Originally completed:** 2022–2023 as an independent learning project.
+- **Public repository created:** August 2026.
+- **Original evidence retained:** byte-preserved historical firmware, the 29-second uncut recording and selected build photographs.
+- **Later portfolio additions:** the 2026 engineering review, v2 refactor, host-side controller model, tests and CI workflow.
+- **Validation rerun status:** the original hardware result has not been rerun; v2 is compile-checked and host-tested but remains unvalidated on the robot.
+
+This repository is a curated publication of the original project files plus clearly separated later engineering work. It does not imply historical commit activity or improved physical performance.
+
 ## Evidence
 
-- One **29-second recorded demonstration** shows active posture correction and periods of upright balance.
+- One **29-second uncut recorded observation** shows active posture correction and periods of upright balance.
 - The prototype also wanders and loses stability; it was not tested across repeated controlled trials.
 - The motors included encoders, but the historical controller did not use them.
 
