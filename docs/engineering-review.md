@@ -35,9 +35,15 @@ The proposed v2 controller adds:
 - Latched `FAULT` state beyond the 15 deg limit, with a deliberate reset command.
 - CSV logging of raw estimates, PID terms, command and state.
 
+## Later bench investigation
+
+The latest supplied development summary adds motor-direction testing, PWM ramp characterisation and direction-specific startup/minimum-PWM/scaling experiments. Both electrical directions worked in standalone tests, but Motor B remained intermittent in one direction and reversal acceleration differed between wheels. Final PID tuning was paused while actuator behaviour and power delivery were investigated.
+
+See [motor characterisation and PID debugging](motor-characterisation.md) for the approximate thresholds, decisions and unresolved diagnosis. The experimental source and raw logs were not supplied; these observations are distinct from the checked-in v2.
+
 ## Validation boundary
 
-Only the historical controller is associated with the video. The v2 code is compile-checked and host-tested but cannot be described as improved physical performance until it is run on the robot.
+Only the historical controller is associated with the video. The checked-in v2 is compile-checked and host-tested. Later bench experiments do not establish repeatable balancing, and the summary does not identify the exact tested firmware revision. Encoder feedback remains planned.
 
 A defensible hardware test would log angle, command and wheel velocity across:
 
